@@ -27,7 +27,7 @@ public class receiver {
 
 
     @RequestMapping(value = "/directions", method = RequestMethod.POST)
-    public Map<String, Object>  directions(@RequestParam(value = "key") String key, @RequestBody Map<String, Object> payLoad){
+    public String directions(@RequestParam(value = "key") String key, @RequestBody Map<String, Object> payLoad){
         BaseResponse response = new BaseResponse();
         if (sharedKey.equalsIgnoreCase(key)) {
 
