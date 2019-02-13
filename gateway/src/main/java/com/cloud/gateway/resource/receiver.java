@@ -42,7 +42,8 @@ public class receiver {
             response.setCode(AUTH_FAILURE);
 
         }
-
+        
+        payLoad.put("Status","Ack");
         return payLoad;
 
     }
