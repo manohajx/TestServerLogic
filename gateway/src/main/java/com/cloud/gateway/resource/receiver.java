@@ -43,8 +43,8 @@ public class receiver {
 
         }
         
-        payLoad.put("Status","Ack");
-        return payLoad;
+        //payLoad.put("Status","Ack");
+        return "Ack";
 
     }
 
