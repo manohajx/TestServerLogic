@@ -27,7 +27,7 @@ public class receiver {
 
 
     @RequestMapping(value = "/directions", method = RequestMethod.POST)
-    public String directions(@RequestParam(value = "key") String key, @RequestBody Map<String, Object> payLoad){
+    public Map<String, Object> directions(@RequestParam(value = "key") String key, @RequestBody Map<String, Object> payLoad){
         BaseResponse response = new BaseResponse();
         if (sharedKey.equalsIgnoreCase(key)) {
 
@@ -43,8 +43,8 @@ public class receiver {
 
         }
         
-        //payLoad.put("Status","Ack");
-        return "Ack";
+        payLoad.put("Status","Ack");
+        return payLoad;
 
     }
 
